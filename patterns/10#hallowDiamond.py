@@ -1,26 +1,39 @@
 n = 4
+
+# Upper half of diamond
 for i in range(1, n+1):
-    for j in range(n-i):
-        print(" ",end=" ")
-    print("*",end=" ")
-    for j in range(i-1):
-        print(" ",end=" ")
-    if(i>=2):
-        for j in range(i-2):
-            print(" ",end= " ")
-        for j in range(1):
-            print("*",end=" ")
-    print()
-for j in range(1,n):
-    for i in range(j):
-        print(" ",end=" ")
-    for i in range(1):
-        print("*",end=" ")
-    for i in range(n-j-1):
-        print(" ",end=" ")
-    for i in range(n-j-2):
-        print(" ",end=" ")
-    if(j<n-1):
-        print("*")
-    print()
+    # Print leading underscores
+    for j in range(n - i):
+        print(" ", end=" ")
     
+    # Print first star
+    print("*", end=" ")
+    
+    # Print middle underscores (if any)
+    if i > 1:
+        for j in range(2 * i - 3):
+            print(" ", end=" ")
+        # Print second star
+        print("*", end="")
+    
+    # New line
+    print()
+
+# Lower half of diamond
+for i in range(n-1, 0, -1):
+    # Print leading underscores
+    for j in range(n - i):
+        print(" ", end=" ")
+    
+    # Print first star
+    print("*", end=" ")
+    
+    # Print middle underscores (if any)
+    if i > 1:
+        for j in range(2 * i - 3):
+            print(" ", end=" ")
+        # Print second star
+        print("*", end="")
+    
+    # New line
+    print()
