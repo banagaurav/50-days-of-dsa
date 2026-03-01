@@ -12,7 +12,7 @@ def isValid(arr, n , m , maxAllowedPages):
         if pages + arr[i] <= maxAllowedPages:
             pages += arr[i]
         else:
-            students + 1 
+            students =+ 1 
             pages = arr[i]
 
     return False if students > m else True
